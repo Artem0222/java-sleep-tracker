@@ -14,7 +14,7 @@ public class SleepTrackerApp {
 
     static {
 
-        analysisFunctions.add(new TotalSessionFunction());
+        analysisFunctions.add(new TotalSessionsFunction());
         analysisFunctions.add(new MinDurationFunction());
         analysisFunctions.add(new MaxDurationFunction());
         analysisFunctions.add(new AverageDurationFunction());
