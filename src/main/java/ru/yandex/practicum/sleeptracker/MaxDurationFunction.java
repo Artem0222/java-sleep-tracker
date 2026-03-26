@@ -9,6 +9,6 @@ public class MaxDurationFunction implements AnalysisFunction {
                 .mapToLong(SleepingSession::getDurationMinutes)
                 .max()
                 .orElse(0);
-        return new SleepAnalysisResult("Максимальная продолжительность ", maxDuration);
+        return new SleepAnalysisResult("Максимальная продолжительность сессии (минуты)", (int) maxDuration);
     }
 }
