@@ -36,10 +36,9 @@ public class SleepTrackerApp {
             System.out.println("Загружено сессий: " + sessions.size());
 
 
-            for (AnalysisFunction function : analysisFunctions) {
-                SleepAnalysisResult result = function.apply(sessions);
-                System.out.println(result);
-            }
+            analysisFunctions.stream()
+                    .map(function -> function.apply(sessions))
+                    .forEach(result -> System.out.println(result));
 
         } catch (IOException e) {
             System.err.println("Ошибка при чтении файла: " + e.getMessage());
